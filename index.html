@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title id="title">INPRO: International propluvia rogation database</title>
+    <meta name="description" content="INPRO is the first international initiative to compile and share information on pro pluvia rogation ceremonies, a well-studied proxy of agricultural drought. The database covers from 14th century to 20th century."/>
+    <meta charset="UTF-8"/>
+<!--     <meta http-equiv='imagetoolbar' content='text/html; charset=UTF-8'/> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="leaflet/leaflet.css?v=1.0"/>
+    <link rel="stylesheet" href="index.css?v=1.0"/>
+    <meta name="author" content="Fergus Reig Gracia" />
+	  <meta name="copyright" content="Instituto Pirenaico de Ecología - CSIC"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7TQLR3NZT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N7TQLR3NZT');
+    </script>
+  </head>
+  <body>
+    <div id="map" style="width: 100%; height: 100%;"></div>
+
+    <div id="time-ranges" class="leaflet-bar">
+	  <form action="#" id="form">
+	    <label for="from">
+	      From
+	      <input id="from" type="date" value="1333-01-01" name="from">
+	    </label>
+	    <label for="to">
+	      To
+	      <input  id="to" type="date" value="1949-12-31" name="to">
+	    </label>
+	    <input type="submit" value="Update">
+	  </form>
+	</div>
+  <div id="time-ranges2" class="leaflet-bar">
+    <form method="get" action="rogativas_propluvia.csv">
+      <input type="submit" value="Download">
+    </form>
+  </div>
+
+    <script src="leaflet/leaflet.js?v=1.0"></script>
+     <!-- Load Esri Leaflet from CDN -->
+  	<script src="esri-leaflet/esri-leaflet.js?v=1.0"></script>
+
+  	<script src="d3/d3.min.js?v=1.0"></script>
+  	<script src="Leaflet.DonutCluster/src/Leaflet.DonutCluster.js?v=1.0"></script>
+  	<script src="Leaflet.markercluster/dist/leaflet.markercluster.js?v=1.0"></script>
+	 <script src="data.js?v=1.0"></script>
+	 <script src="index_function.js?v=1.0"></script>
+    <script src="index.js?v=1.0"></script>
+  </body>
+</html>
